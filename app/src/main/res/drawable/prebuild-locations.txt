@@ -6,3 +6,5 @@ Emily Murphy Park  53.5339, -113.5374
 William Hawrelak Park?    53.5279, -113.5474
 
 Blue Quill Park     53.459104, -113.523460
+
+Harry Ainlay Field / Whitemud Park  53.481505, -113.521564
