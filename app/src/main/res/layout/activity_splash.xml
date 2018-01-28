@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context="com.example.jacob.weed_map.Splash">
 
     <ImageView
@@ -19,7 +20,7 @@
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop = "20sp"
-        android:text="Weed Map"
+        android:text="Blazemap"
         android:textColor = "@android:color/holo_green_light"
         android:textSize = "70sp"/>
 
