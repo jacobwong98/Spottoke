@@ -11,6 +11,77 @@
         android:layout_height="match_parent">
 
         <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="Alberta Legislature Building"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14dp" />
+
+            <ImageView
+                android:id="@+id/legislaturePic"
+                android:src="@drawable/legislature"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/ratingBar"
+                android:layout_centerHorizontal="true" />
+            <TextView
+                android:id="@+id/trumpQ"
+                android:layout_below="@+id/legislaturePic"
+                android:textSize="19sp"
+                android:textStyle="italic"
+                android:text="@string/trump"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/snoopQ"
+                android:layout_below="@+id/trumpQ"
+                android:textSize="19sp"
+                android:textStyle="italic"
+                android:text="@string/snoop"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/marthaQ"
+                android:layout_below="@+id/snoopQ"
+                android:textSize="19sp"
+                android:textStyle="italic"
+                android:text="@string/martha"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_margin="5dp"
@@ -81,9 +152,147 @@
 
         </android.support.v7.widget.CardView>
 
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="10dp"
+            app:cardPreventCornerOverlap="false">
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
+                <TextView
+                    android:id="@+id/Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="Alberta Legislature Building"
+                    android:textSize="30sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="16dp" />
 
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="14dp" />
+
+                <ImageView
+                    android:id="@+id/legislaturePic"
+                    android:src="@drawable/legislature"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/ratingBar"
+                    android:layout_centerHorizontal="true" />
+                <TextView
+                    android:id="@+id/trumpQ"
+                    android:layout_below="@+id/legislaturePic"
+                    android:textSize="19sp"
+                    android:textStyle="italic"
+                    android:text="@string/trump"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/snoopQ"
+                    android:layout_below="@+id/trumpQ"
+                    android:textSize="19sp"
+                    android:textStyle="italic"
+                    android:text="@string/snoop"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/marthaQ"
+                    android:layout_below="@+id/snoopQ"
+                    android:textSize="19sp"
+                    android:textStyle="italic"
+                    android:text="@string/martha"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="10dp"
+            app:cardPreventCornerOverlap="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="Alberta Legislature Building"
+                    android:textSize="30sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="16dp" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="14dp" />
+
+                <ImageView
+                    android:id="@+id/legislaturePic"
+                    android:src="@drawable/legislature"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/ratingBar"
+                    android:layout_centerHorizontal="true" />
+                <TextView
+                    android:id="@+id/trumpQ"
+                    android:layout_below="@+id/legislaturePic"
+                    android:textSize="19sp"
+                    android:textStyle="italic"
+                    android:text="@string/trump"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/snoopQ"
+                    android:layout_below="@+id/trumpQ"
+                    android:textSize="19sp"
+                    android:textStyle="italic"
+                    android:text="@string/snoop"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/marthaQ"
+                    android:layout_below="@+id/snoopQ"
+                    android:textSize="19sp"
+                    android:textStyle="italic"
+                    android:text="@string/martha"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
 
     </ScrollView>
 

@@ -208,7 +208,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
-
     @Override
     public void onConnected(@Nullable Bundle bundle) {
         locationRequest = new LocationRequest();
