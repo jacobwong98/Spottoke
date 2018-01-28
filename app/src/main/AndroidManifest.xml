@@ -34,7 +34,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name=".Splash"
             android:label="@string/title_activity_maps">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,10 +42,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name=".Splash"
-            android:theme="@style/splash"></activity>
-        <activity android:name=".LegReview"></activity>
+            android:name=".MapsActivity"
+            android:theme="@style/splash">
+        </activity>
+
+        <activity android:name=".LegReview">
+        </activity>
+
     </application>
 
 </manifest>

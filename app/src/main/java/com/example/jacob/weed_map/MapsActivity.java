@@ -56,14 +56,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     .findFragmentById(R.id.map);
             mapFragment.getMapAsync(this);
 
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    Intent splashIntent = new Intent(MapsActivity.this, Splash.class);
-                    startActivity(splashIntent);
-                    finish();
-                }
-            },SPLASH_TIME_OUT);
+//            new Handler().postDelayed(new Runnable() {
+//                @Override
+//                public void run() {
+//                    Intent splashIntent = new Intent(MapsActivity.this, Splash.class);
+//                    startActivity(splashIntent);
+//                    finish();
+//                }
+//            },SPLASH_TIME_OUT);
         }
     }
 
