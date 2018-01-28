@@ -8,10 +8,14 @@
     tools:context="com.example.jacob.weed_map.Explore"
     tools:showIn="@layout/activity_explore">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:text="@string/large_text" />
-
+        android:columnWidth="90dp"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp" />
 </android.support.v4.widget.NestedScrollView>

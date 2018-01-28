@@ -13,8 +13,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
-import android.view.View;
-import android.widget.Button;
+import android.widget.GridView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -46,20 +45,35 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private static int SPLASH_TIME_OUT = 20;
     private Marker marker;
 
+    GridView gridView;
+
+//    int[] images = {
+//            R.drawable.image1
+//            R.drawable.image2
+//            R.drawable.image3
+//            R.drawable.image4
+//            R.drawable.image5
+//            R.drawable.image6
+//            R.drawable.image7
+//            R.drawable.image8
+//            R.drawable.image9
+//            R.drawable.image10
+//            R.drawable.image11
+//            R.drawable.image12
+//            R.drawable.image13
+//            R.drawable.image14
+//            R.drawable.image15
+//            R.drawable.image16
+//            R.drawable.image17
+//            R.drawable.image18
+//            R.drawable.image19
+//            R.drawable.image20
+//    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
-
-        Button exButt = findViewById(R.id.exButton);
-        exButt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent exToRev = new Intent(MapsActivity.this, LegReview.class);
-                startActivity(exToRev);
-            }
-        });
-
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
             checkLocationPermission();
