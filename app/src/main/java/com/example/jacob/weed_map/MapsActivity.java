@@ -73,7 +73,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 else {
                     Toast.makeText(this, "GET OUT", Toast.LENGTH_LONG).show();
                 }
-                return;
+                //return; // dont need this i think
         }
     }
 
@@ -103,12 +103,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         LatLng alb = new LatLng(53.533197, -113.505883);
         mMap.addMarker(new MarkerOptions().position(alb).snippet("Apparently people smoke here on 4/20 lmao").title("Alberta Legislature Building"));
-
-        LatLng hafield = new LatLng(53.481505, -113.521564);
-        mMap.addMarker(new MarkerOptions().position(hafield).snippet("something").title("Harry Ainley Field"));
-
-
-
+        // mMap.moveCamera(CameraUpdateFactory.newLatLng(alb));
+        // comment
 //        Near Alberta Legislature Building    53.533197, -113.505883
 //                - Apparently people smoke here on 4/20 lmao
 //
@@ -148,12 +144,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onLocationChanged(Location location) {
         lastLocation = location;
 
-        //manually entered locations
-        final LatLng TEST1 = new LatLng(53.81319, -133.96298);
-        Marker melbourne = mMap.addMarker(new MarkerOptions()
-                .position(TEST1)
-                .title("Test1")
-                .snippet("RATING 4/5"));
+//        //manually entered locations
+//        final LatLng TEST1 = new LatLng(53.528353, -113.530888);
+//        Marker melbourne = mMap.addMarker(new MarkerOptions()
+//                .position(TEST1)
+//                .title("Test1")
+//                .snippet("RATING 4/5")); // placeholder
+
+        double[][] setLocations = {{53.533197, -113.505883}, {53.5339, -113.5374}, {53.5279, -113.5474}, {53.599918, -113.489667}};
+
+        for (int i = 0; i < 4; i++)
+        {
+            final LatLng marker = new LatLng(setLocations[i][0], setLocations[i][1]);
+            Marker melbourne = mMap.addMarker(new MarkerOptions()
+                    .position(marker)
+                    .title("Test1")
+                    .snippet("Rating?")); // placeholder
+        }
 
 
         if (currentLocationMarker != null){
@@ -167,7 +174,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //        Bitmap smallMarker = Bitmap.createScaledBitmap(b, width, height, false);
 
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(latLng);
         markerOptions.title("Current Location");
@@ -181,7 +188,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         currentLocationMarker = mMap.addMarker(markerOptions);
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-        //mMap.moveCamera(CameraUpdateFactory.newLatLng(53, -113));
         mMap.animateCamera(CameraUpdateFactory.zoomBy(12));
 
         if (client != null){
