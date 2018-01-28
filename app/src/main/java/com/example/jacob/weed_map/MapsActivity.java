@@ -104,7 +104,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng alb = new LatLng(53.533197, -113.505883);
         mMap.addMarker(new MarkerOptions().position(alb).snippet("Apparently people smoke here on 4/20 lmao").title("Alberta Legislature Building"));
         // mMap.moveCamera(CameraUpdateFactory.newLatLng(alb));
-
+        // comment
 //        Near Alberta Legislature Building    53.533197, -113.505883
 //                - Apparently people smoke here on 4/20 lmao
 //
