@@ -103,7 +103,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         LatLng alb = new LatLng(53.533197, -113.505883);
         mMap.addMarker(new MarkerOptions().position(alb).snippet("Apparently people smoke here on 4/20 lmao").title("Alberta Legislature Building"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(alb));
+        // mMap.moveCamera(CameraUpdateFactory.newLatLng(alb));
 
 //        Near Alberta Legislature Building    53.533197, -113.505883
 //                - Apparently people smoke here on 4/20 lmao
@@ -163,7 +163,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //        Bitmap smallMarker = Bitmap.createScaledBitmap(b, width, height, false);
 
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(latLng);
         markerOptions.title("Current Location");
@@ -177,7 +177,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         currentLocationMarker = mMap.addMarker(markerOptions);
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-        //mMap.moveCamera(CameraUpdateFactory.newLatLng(53, -113));
         mMap.animateCamera(CameraUpdateFactory.zoomBy(12));
 
         if (client != null){
