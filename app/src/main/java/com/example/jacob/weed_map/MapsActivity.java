@@ -146,7 +146,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         //manually entered locations
         final LatLng TEST1 = new LatLng(53.528353, -113.530888);
-        Marker melbourne = mMap.addMarker(new MarkerOptions()
+        Marker test1Marker = mMap.addMarker(new MarkerOptions()
                 .position(TEST1)
                 .title("Test1")
                 .snippet("RATING 4/5"));
