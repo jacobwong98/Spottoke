@@ -22,14 +22,11 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-
-import java.util.Map;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
@@ -73,7 +70,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 else {
                     Toast.makeText(this, "GET OUT", Toast.LENGTH_LONG).show();
                 }
-                return;
         }
     }
 
@@ -129,9 +125,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //
 //        Stoner, B.C.
 //                The Weed Store, Weed, California    41.420266, -122.383258
-
-
-
     }
 
     protected synchronized void buildGoogleApiClient(){
@@ -169,10 +162,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         markerOptions.title("Current Location");
         markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
         //markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.poop));
-
         //markerOptions.icon(BitmapDescriptorFactory.fromBitmap(smallMarker));
-
-
 
         currentLocationMarker = mMap.addMarker(markerOptions);
 
@@ -199,7 +189,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-    public boolean checkLocationPermission(){
+    public void checkLocationPermission(){
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED){
             if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)){
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION_CODE);
@@ -208,10 +198,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION_CODE);
 
             }
-            return false;
-        }
-        else {
-            return true;
         }
     }
 
