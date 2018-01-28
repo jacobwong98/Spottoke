@@ -139,6 +139,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         currentLocationMarker = mMap.addMarker(markerOptions);
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+        //mMap.moveCamera(CameraUpdateFactory.newLatLng(53, -113));
         mMap.animateCamera(CameraUpdateFactory.zoomBy(12));
 
         if (client != null){
