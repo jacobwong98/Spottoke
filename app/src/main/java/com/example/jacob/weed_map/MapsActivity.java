@@ -42,6 +42,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private Marker currentLocationMarker;
     public static final int REQUEST_LOCATION_CODE = 99;
     private static int SPLASH_TIME_OUT = 20;
+    private Marker marker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,34 +110,36 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         }
 
+        //manually entered locations
         LatLng alb = new LatLng(53.533197, -113.505883);
-        mMap.addMarker(new MarkerOptions().position(alb).snippet("Apparently people smoke here on 4/20 lmao").title("Alberta Legislature Building"));
-        // mMap.moveCamera(CameraUpdateFactory.newLatLng(alb));
+        mMap.addMarker(new MarkerOptions()
+                .position(alb)
+                .title("Alberta Legislature Grounds")
+                .snippet("⭐⭐⭐⭐"));
 
-//        Near Alberta Legislature Building    53.533197, -113.505883
-//                - Apparently people smoke here on 4/20 lmao
-//
-//        Emily Murphy Park  53.5339, -113.5374
-//
-//        William Hawrelak Park?    53.5279, -113.5474
-//
-//        Blue Quill Park     53.459104, -113.523460
-//
-//        Harry Ainlay Field / Whitemud Park  53.481505, -113.521564
-//                - Great place, just don’t let the constable see you.
-//
-//        Northgate Transit Centre    53.599918, -113.489667
-//
-//        Castle Downs YMCA      53.614549, -113.520785
-//
-//        Castle Downs EPL Alley  53.616440, -113.514981
-//
-//        Sobeys by Clairview (Under the Tree)    53.597695, -113.390008
-//
-//        Asbestos, Quebec
-//
-//        Stoner, B.C.
-//                The Weed Store, Weed, California    41.420266, -122.383258
+        final LatLng TEST1 = new LatLng(53.522552, -113.520331);
+        Marker test1Marker = mMap.addMarker(new MarkerOptions()
+                .position(TEST1)
+                .title("Patio (owners do not mind)")
+                .snippet("⭐⭐⭐⭐"));
+
+        final LatLng TEST2 = new LatLng(53.529282, -113.534785);
+        Marker test2Marker = mMap.addMarker(new MarkerOptions()
+                .position(TEST2)
+                .title("Bench beside the fire hydrant")
+                .snippet("⭐⭐⭐⭐"));
+
+        final LatLng TEST3 = new LatLng(53.531702, -113.530392);
+        Marker test3Marker = mMap.addMarker(new MarkerOptions()
+                .position(TEST3)
+                .title("Great secluded spot by the river")
+                .snippet("⭐⭐⭐⭐⭐"));
+
+        final LatLng TEST4 = new LatLng(53.526740, -113.525854);
+        Marker test4Marker = mMap.addMarker(new MarkerOptions()
+                .position(TEST4)
+                .title("Smoking on school grounds is not permitted")
+                .snippet("⭐"));
     }
 
     protected synchronized void buildGoogleApiClient(){
@@ -148,13 +151,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onLocationChanged(Location location) {
         lastLocation = location;
-
-        //manually entered locations
-        final LatLng TEST1 = new LatLng(53.528353, -113.530888);
-        Marker test1Marker = mMap.addMarker(new MarkerOptions()
-                .position(TEST1)
-                .title("Test1")
-                .snippet("RATING 4/5"));
 
 
         if (currentLocationMarker != null){
@@ -175,6 +171,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
         //markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.poop));
         //markerOptions.icon(BitmapDescriptorFactory.fromBitmap(smallMarker));
+
 
         currentLocationMarker = mMap.addMarker(markerOptions);
 
@@ -217,11 +214,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     public void onConnectionSuspended(int i) {
-
     }
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-
     }
 }
