@@ -169,8 +169,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         markerOptions.position(latLng);
         markerOptions.title("Current Location");
         markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
-        //markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.poop));
-        //markerOptions.icon(BitmapDescriptorFactory.fromBitmap(smallMarker));
+        //markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.marker));
 
 
         currentLocationMarker = mMap.addMarker(markerOptions);
