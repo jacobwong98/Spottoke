@@ -8,20 +8,20 @@
     tools:context="com.example.jacob.weed_map.Splash">
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="200sp"
         android:layout_height="200sp"
         android:layout_centerInParent="true"
-        android:src="@drawable/poop"
-        android:id = "@+id/imageView"/>
+        android:src="@drawable/logo" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop = "20sp"
-        android:text="Blazemap"
-        android:textColor = "@android:color/holo_green_light"
-        android:textSize = "70sp"/>
+        android:layout_marginTop="20sp"
+        android:text="Spottoke"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="70sp" />
 
 </RelativeLayout>
