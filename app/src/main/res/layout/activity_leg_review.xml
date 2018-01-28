@@ -50,10 +50,20 @@
                     android:layout_below="@+id/ratingBar"
                     android:layout_centerHorizontal="true" />
                 <TextView
+                    android:id="@+id/trumpQ"
                     android:layout_below="@+id/legislaturePic"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
+                    android:textSize="19sp"
+                    android:textStyle="italic"
                     android:text="@string/trump"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/snoopQ"
+                    android:layout_below="@+id/trumpQ"
+                    android:textSize="19sp"
+                    android:textStyle="italic"
+                    android:text="@string/snoop"
                     android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
