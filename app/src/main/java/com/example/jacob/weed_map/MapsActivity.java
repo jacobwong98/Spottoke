@@ -101,6 +101,36 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         }
 
+        LatLng alb = new LatLng(53.533197, -113.505883);
+        mMap.addMarker(new MarkerOptions().position(alb).snippet("Apparently people smoke here on 4/20 lmao").title("Alberta Legislature Building"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(alb));
+
+//        Near Alberta Legislature Building    53.533197, -113.505883
+//                - Apparently people smoke here on 4/20 lmao
+//
+//        Emily Murphy Park  53.5339, -113.5374
+//
+//        William Hawrelak Park?    53.5279, -113.5474
+//
+//        Blue Quill Park     53.459104, -113.523460
+//
+//        Harry Ainlay Field / Whitemud Park  53.481505, -113.521564
+//                - Great place, just don’t let the constable see you.
+//
+//        Northgate Transit Centre    53.599918, -113.489667
+//
+//        Castle Downs YMCA      53.614549, -113.520785
+//
+//        Castle Downs EPL Alley  53.616440, -113.514981
+//
+//        Sobeys by Clairview (Under the Tree)    53.597695, -113.390008
+//
+//        Asbestos, Quebec
+//
+//        Stoner, B.C.
+//                The Weed Store, Weed, California    41.420266, -122.383258
+
+
 
     }
 
@@ -134,6 +164,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.poop));
 
         //markerOptions.icon(BitmapDescriptorFactory.fromBitmap(smallMarker));
+
 
 
         currentLocationMarker = mMap.addMarker(markerOptions);
