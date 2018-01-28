@@ -4,13 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context="com.example.jacob.weed_map.Splash">
 
     <ImageView
         android:layout_width="200sp"
         android:layout_height="200sp"
         android:layout_centerInParent="true"
-        android:src="@drawable/poop"/>
+        android:src="@drawable/poop"
+        android:id = "@+id/imageView"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop = "20sp"
+        android:text="Blazemap"
+        android:textColor = "@android:color/holo_green_light"
+        android:textSize = "70sp"/>
 
 </RelativeLayout>
