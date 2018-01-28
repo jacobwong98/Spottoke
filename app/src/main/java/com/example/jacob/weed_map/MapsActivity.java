@@ -1,4 +1,4 @@
-package com.example.jacob.weed_map; //test
+package com.example.jacob.weed_map; //test2
 
 import android.Manifest;
 import android.content.pm.PackageManager;
