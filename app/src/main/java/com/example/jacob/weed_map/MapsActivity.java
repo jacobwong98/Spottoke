@@ -73,7 +73,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 else {
                     Toast.makeText(this, "GET OUT", Toast.LENGTH_LONG).show();
                 }
-                return;
+                //return; // dont need this i think
         }
     }
 
@@ -144,20 +144,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onLocationChanged(Location location) {
         lastLocation = location;
 
-        //manually entered locations
+//        //manually entered locations
 //        final LatLng TEST1 = new LatLng(53.528353, -113.530888);
 //        Marker melbourne = mMap.addMarker(new MarkerOptions()
 //                .position(TEST1)
 //                .title("Test1")
 //                .snippet("RATING 4/5")); // placeholder
 
-        float[] setLocations = {{53.533197, -113.505883}, {53.5339, -113.5374}, {53.5279, -113.5474}, {53.599918, -113.489667}}
+        double[][] setLocations = {{53.533197, -113.505883}, {53.5339, -113.5374}, {53.5279, -113.5474}, {53.599918, -113.489667}};
 
-        for (int i = 0, i < 4; i++)
+        for (int i = 0; i < 4; i++)
         {
-            final LatLng i = new LatLng(setLocations[i][0], setLocations[i][1]);
+            final LatLng marker = new LatLng(setLocations[i][0], setLocations[i][1]);
             Marker melbourne = mMap.addMarker(new MarkerOptions()
-                    .position(TEST1)
+                    .position(marker)
                     .title("Test1")
                     .snippet("Rating?")); // placeholder
         }
