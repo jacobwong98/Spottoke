@@ -6,14 +6,13 @@ import android.widget.RatingBar;
 
 public class LegReview extends AppCompatActivity {
 
-    float rating = (float) 3.0;
+    float rating1 = (float) 4.0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leg_review);
 
         RatingBar rb1 = findViewById(R.id.ratingBar);
-
-        rb1.setRating(rating);
+        rb1.setRating(rating1);
     }
 }
