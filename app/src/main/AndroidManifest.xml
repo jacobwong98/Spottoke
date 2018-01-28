@@ -44,12 +44,15 @@
         </activity>
         <activity
             android:name=".MapsActivity"
-            android:theme="@style/splash"></activity>
-        <activity android:name=".LegReview"></activity>
+            android:theme="@style/splash"/>
+        <activity
+            android:name=".LegReview"
+            android:label="@string/title_activity_maps"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".Explore"
             android:label="@string/title_activity_explore"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>
