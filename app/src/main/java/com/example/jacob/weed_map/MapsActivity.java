@@ -91,6 +91,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             buildGoogleApiClient();
             mMap.setMyLocationEnabled(true);
+
         }
 
 
@@ -111,12 +112,22 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             currentLocationMarker.remove();
         }
 
+//        int height = 100;
+//        int width = 100;
+//        BitmapDrawable bitmapdraw=(BitmapDrawable)getResources().getDrawable(R.drawable.poop);
+//        Bitmap b=bitmapdraw.getBitmap();
+//        Bitmap smallMarker = Bitmap.createScaledBitmap(b, width, height, false);
+
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
 
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(latLng);
         markerOptions.title("Current Location");
         markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
+        //markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.poop));
+
+        //markerOptions.icon(BitmapDescriptorFactory.fromBitmap(smallMarker));
+
 
         currentLocationMarker = mMap.addMarker(markerOptions);
 
