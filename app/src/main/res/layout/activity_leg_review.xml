@@ -43,12 +43,20 @@
                     android:layout_marginTop="14dp" />
 
                 <ImageView
+                    android:id="@+id/legislaturePic"
                     android:src="@drawable/legislature"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_below="@+id/ratingBar"
-                    android:layout_centerHorizontal="true"
-                    />
+                    android:layout_centerHorizontal="true" />
+                <TextView
+                    android:layout_below="@+id/legislaturePic"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:text="@string/trump"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
             </RelativeLayout>
 
